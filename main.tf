@@ -1,14 +1,14 @@
 provider "google" {
   #credentials = file("terraform.json")
   project = "ishaqgcpproject"
-  region  = "us-east1"
+  region  = "us-west1"
   
 }
 
 resource "google_compute_instance" "vm-instance" {
   name         = "test-starup"
   machine_type = "f1-micro"
-  zone         = "us-east1-b"
+  zone         = "us-west1-b"
 
   boot_disk {
     initialize_params {
