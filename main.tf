@@ -1,14 +1,14 @@
 provider "google" {
   credentials = file("terraform.json")
   project = "ishaqgcpproject"
-  region  = "us-west1"
+  region  = "us-central1"
   
 }
 
 resource "google_compute_instance" "vm-instance" {
   name         = "target-vm"
   machine_type = "f1-micro"
-  zone         = "us-west1-b"
+  zone         = "us-central1-c"
 
   boot_disk {
     initialize_params {
